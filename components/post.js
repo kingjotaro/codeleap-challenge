@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
 import HatTrick from "./post/hatTrick";
+import Profile from "./profile";
 
 export default function Post(props) {
   const router = useRouter();
@@ -46,6 +47,9 @@ export default function Post(props) {
 
   return (
     <div className="font-roboto mt-10">
+      <div className="flex">
+       <Profile></Profile>
+      <div className="w-[700px]" >
       <div className=" rounded">
         <h1 className="h-[60px] font-bold text-2xl text-center flex flex-col justify-center bg-black text-white rounded-t-lg ">
           Welcome to CodeLeap Network!
@@ -74,6 +78,8 @@ export default function Post(props) {
             </button>
           </div>
         </div>
+      </div>
+      </div>
       </div>
       {postData.map((post) => (
         <DisplayPost
