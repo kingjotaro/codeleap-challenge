@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Monofett&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+
 
 
 .inputcss {
   @apply w-full bg-gradient-to-l from-gray-300 border border-gray-400 rounded shadow-inner
 }
 
-.postcss { 
-  @apply border border-black bg-gradient-to-r from-gray-50 to-gray-100
-}
 
 .awesomebutton {
-  @apply   transform  text-white  hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-2xl  text-center
+  @apply w-full sm:w-auto transform text-white hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-2xl text-center;
 }
+
 
 body {
   background-color: #d1d5db;

@@ -3,13 +3,10 @@ import { subtractTime } from "./displayPost/subtractTime";
 import { useState } from "react";
 import ModalEdit from "./modalEdit";
 
-
 export default function DisplayPost(props) {
-  const { title, content, username, date, time, _id, user} = props;
+  const { title, content, username, date, time, _id, user } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
-
-
 
   function changeModalDelete() {
     setIsOpen(!isOpen);
@@ -19,16 +16,20 @@ export default function DisplayPost(props) {
     setIsOpen2(!isOpen2);
   }
 
-  
-
   return (
     <div className="shadow-2xl mt-5 font-roboto">
       <div className="bg-white w-[1100px] h-[316px] border border-gray-500 rounded-lg">
         <div className="rounded-t-md bg-black p-2 flex justify-between text-white h-[80px]">
-          <div className="ml-5 text-xl font-bold flex justify-center flex-col">{title}</div>
+          <div className="ml-5 text-xl font-bold flex justify-center flex-col">
+            {title}
+          </div>
           <div className="flex justify-center">
-            <button className={`mr-8 hover:rotate-[-10deg] ${(user === username)? '': 'hidden' }`} onClick={changeModalDelete}>
-              
+            <button
+              className={`mr-8 hover:rotate-[-10deg] ${
+                user === username ? "" : "hidden"
+              }`}
+              onClick={changeModalDelete}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -45,7 +46,12 @@ export default function DisplayPost(props) {
               </svg>
             </button>
 
-            <button className={`mr-2 hover:rotate-[-10deg] ${(user === username)? '': 'hidden' }`} onClick={changeModalEdit}>
+            <button
+              className={`mr-2 hover:rotate-[-10deg] ${
+                user === username ? "" : "hidden"
+              }`}
+              onClick={changeModalEdit}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -63,17 +69,33 @@ export default function DisplayPost(props) {
             </button>
           </div>
         </div>
-        <div className="flex justify-between text-gray-500 mt-5 p-1 ml-4 mr-4">
-          <div className="font-bold">@{username}</div>
-          <div>{subtractTime(date, time)}</div>
+        <div className="flex justify-between text-gray-500 mt-5 p-1 px-24">
+          <div className="border font-bold bg-gray-100 rounded-2xl w-[200px] text-center">
+            @{username}
+          </div>
+          <div className="border bg-gray-100 rounded-2xl w-[100px] text-center ">
+            {subtractTime(date, time)}
+          </div>
         </div>
         <div className="flex flex-row justify-center">
-          <div className="h-[160px] w-[720px] p-3 border border-gray-500 break-word">{content}</div>
+          <div className="h-[160px] w-[900px] p-3  break-word rounded text-gray-900 bg-gray-100 ">
+            {content}
+          </div>
         </div>
       </div>
-      <ModalDelete _id={_id} isOpen={isOpen} setIsOpen={setIsOpen}> </ModalDelete>
-      <ModalEdit date={date} time={time} username={username} _id={_id} isOpen2={isOpen2} setIsOpen2={setIsOpen2}> </ModalEdit>
-      
+      <ModalDelete _id={_id} isOpen={isOpen} setIsOpen={setIsOpen}>
+        {" "}
+      </ModalDelete>
+      <ModalEdit
+        date={date}
+        time={time}
+        username={username}
+        _id={_id}
+        isOpen2={isOpen2}
+        setIsOpen2={setIsOpen2}
+      >
+        {" "}
+      </ModalEdit>
     </div>
   );
 }

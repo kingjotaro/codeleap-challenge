@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: ['Roboto'],
+        monofett: ['Monofett'],
       },
      
     },

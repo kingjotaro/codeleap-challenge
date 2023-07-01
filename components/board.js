@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import InputUser from "./board/inputUser";
 import SubmitButton from "./board/submitButton";
-import {useSession} from "next-auth/react";
+import { useSession } from "next-auth/react";
 import axios from "axios";
 import { useRouter } from "next/router";
-
 
 export default function Board(props) {
   const { data: session } = useSession();
@@ -29,18 +28,16 @@ export default function Board(props) {
     checkUsername();
   }, [session, router]);
 
-
   return (
-    <div className="bg-gradient-to-r from-gray-400 to-gray-300  font-roboto shadow-2xl border border-gray-600 rounded-xl p-6 flex flex-col justify-center w-[500px] h-[205px]">
-      <div className="font-bold -mt-10 mb-10 text-xl ">
+    <div className="bg-gradient-to-r from-gray-400 to-gray-300 font-roboto shadow-2xl border border-gray-600 rounded-xl p-6 flex flex-col justify-center w-[90%] sm:w-[75%] md:w-[50%] lg:w-[30%] mx-auto">
+      <div className="font-bold -mt-10 mb-10 text-xl text-center">
         Welcome to CodeLeap network!
       </div>
       <div>{}</div>
-      <div className="font-normal">Please enter your username</div>
+      <div className="font-normal text-center mb-2">Please enter your username</div>
       <InputUser username={username} setUsername={setUsername}>
         {""}
       </InputUser>
-
       <SubmitButton username={username} setUsername={setUsername}></SubmitButton>
     </div>
   );

@@ -9,7 +9,7 @@ const [title, setTitle] = useState("");
 const [content, setContent] = useState("");
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
       
             
             <Post title={title} setTitle={setTitle} content={content} setContent={setContent}></Post>
