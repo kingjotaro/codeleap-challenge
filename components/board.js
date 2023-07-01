@@ -30,7 +30,7 @@ export default function Board(props) {
 
   return (
     <div className="bg-gradient-to-r from-gray-400 to-gray-300 font-roboto shadow-2xl border border-gray-600 rounded-xl p-6 flex flex-col justify-center w-[90%] sm:w-[75%] md:w-[50%] lg:w-[30%] mx-auto">
-      <div className="font-bold -mt-10 mb-10 text-xl text-center">
+      <div className="font-bold text-xl text-center">
         Welcome to CodeLeap network!
       </div>
       <div>{}</div>
