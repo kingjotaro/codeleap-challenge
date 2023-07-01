@@ -5,7 +5,7 @@ import ModalEdit from "./modalEdit";
 
 
 export default function DisplayPost(props) {
-  const { title, content, username, date, time, _id } = props;
+  const { title, content, username, date, time, _id, user} = props;
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -27,7 +27,7 @@ export default function DisplayPost(props) {
         <div className="rounded-t-md bg-black p-2 flex justify-between text-white h-[80px]">
           <div className="ml-5 text-xl font-bold flex justify-center flex-col">{title}</div>
           <div className="flex justify-center">
-            <button className="mr-8 hover:rotate-[-10deg]" onClick={changeModalDelete}>
+            <button className={`mr-8 hover:rotate-[-10deg] ${(user === username)? '': 'hidden' }`} onClick={changeModalDelete}>
               
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function DisplayPost(props) {
               </svg>
             </button>
 
-            <button className="mr-2 hover:rotate-[-10deg]" onClick={changeModalEdit}>
+            <button className={`mr-2 hover:rotate-[-10deg] ${(user === username)? '': 'hidden' }`} onClick={changeModalEdit}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

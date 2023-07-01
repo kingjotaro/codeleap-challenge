@@ -15,10 +15,11 @@ export default async function handler(req, res) {
   }
 
   if (method === "GET") {
-      req.query?.email 
-      const data =(await Username.findOne({ email: req.query?.email }));
-      res.json(data)
+    const email = req.query.email;
+    const data = await Username.findOne({ email });
+    res.json(data);
   }
+  
 
 }
 
