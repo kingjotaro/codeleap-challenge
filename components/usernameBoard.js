@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-export default function Board(props) {
+export default function UsernameBoard(props) {
   const { data: session } = useSession();
   const router = useRouter();
 

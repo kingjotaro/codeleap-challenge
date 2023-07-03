@@ -1,8 +1,10 @@
 import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function Profile(props) {
   const { user } = props;
   const { data: session } = useSession();
+  const router = useRouter();
 
   return (
     <div className="w-full md:w-[50%] h-[370px] border border-black rounded-l-2xl items-center flex flex-col bg-gradient-to-r from-gray-400 to-gray-50 shadow-2xl">
@@ -19,7 +21,10 @@ export default function Profile(props) {
       </div>
       <button
         className="awesomebutton px-2 py-1 bg-gray-400 mt-5"
-        onClick={() => signOut("google")}
+        onClick={() => signOut("google").then( () => router.push("/"))}
+
+        
+
       >
         Sign out
       </button>

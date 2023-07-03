@@ -1,5 +1,5 @@
 import ModalDelete from "./modalDelete";
-import { subtractTime } from "./displayPost/subtractTime";
+import { subtractTime } from "./displayPost/functions/subtractTime";
 import { useState } from "react";
 import ModalEdit from "./modalEdit";
 

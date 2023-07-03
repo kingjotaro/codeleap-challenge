@@ -1,11 +1,13 @@
 import Login from "@/components/login";
-import Board from "@/components/board";
+import UsernameBoard from "@/components/usernameBoard";
 export default function Home() {
  
 
   return (
     <Login>
-        <Board></Board>  
+        <UsernameBoard>
+          
+          </UsernameBoard>  
     </Login>
   );
 }
