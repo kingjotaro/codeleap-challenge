@@ -42,7 +42,7 @@ export default function Send(props) {
                     className={`w-20 h-8 rounded-full text-gray-300 ${
                       isBlank
                         ? "bg-gray-700 cursor-not-allowed"
-                        : "animate-bounce bg-blue-500 text-black hover:animate-none shadow-lg shadow-blue-500/50"
+                        : "animate-bounce bg-blue-500 text-black hover:animate-none shadow-lg shadow-blue-500/50 hover:translate-y-[-10px]"
                     }`}
                   >
                     Create
