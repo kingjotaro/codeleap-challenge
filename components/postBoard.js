@@ -3,11 +3,19 @@ import { useSession } from "next-auth/react";
 import DisplayPost from "./post/displayPost";
 import { useEffect, useState } from "react";
 import {Send, HatTrick, Profile, Disconnected} from './post/index'
+import Pagination from "./post/pagination";
+import constants  from './post/constants'
+import NumberPost from "./post/numberPost";
 
 export default function PostBoard() {
+  const [pagination, setPagination] = useState([]);
   const [user, setUser] = useState("");
   const [postData, setPostData] = useState([]);
   const [titleState, setTitleState] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postNumber, setPostNumber] = useState(3);
+ 
+
   const { data: session } = useSession();
   const email = session?.user?.email;
 
@@ -33,6 +41,16 @@ export default function PostBoard() {
     }
     fetchData();
   }, [email]);
+
+  
+  
+
+
+
+
+
+ 
+  
 
   if (session) {
     return (
@@ -68,20 +86,30 @@ export default function PostBoard() {
             </div>
           </div>
         </div>
-        {postData.map((post) => (
-          <DisplayPost
-            postData={postData}
-            setPostData={setPostData}
-            _id={post._id}
-            username={post.username}
-            title={post.title}
-            content={post.content}
-            time={post.time}
-            date={post.date}
-            user={user}
-          />
-        ))}
+        {constants(postData, currentPage, postNumber).map((post) => (
+  <DisplayPost
+    key={post._id}
+    postData={postData}
+    setPostData={setPostData}
+    _id={post._id}
+    username={post.username}
+    title={post.title}
+    content={post.content}
+    time={post.time}
+    date={post.date}
+    user={user}
+  />
+))}
+ <Pagination postData={postData}
+  currentPage={currentPage}
+  setCurrentPage={setCurrentPage}
+  postNumber={postNumber}
+ ></Pagination>
+
+ <NumberPost setPostNumber={setPostNumber}></NumberPost>
+       
       </div>
+      
     );
   }
 
