@@ -10,7 +10,7 @@ export default function HatTrick(props) {
   };
 
   return (
-    <div className="w-full">
+    <div>
       <h2 className=" font-bold text-2xl text-start">Send a message!</h2>
       <div className="mb-1 mt-4 text-start ">Title</div>
       <input

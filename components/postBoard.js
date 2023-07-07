@@ -2,9 +2,9 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import DisplayPost from "./post/displayPost";
 import { useEffect, useState } from "react";
-import {Send, HatTrick, Profile, Disconnected} from './post/index'
+import { Send, HatTrick, Profile, Disconnected } from "./post/index";
 import Pagination from "./post/pagination";
-import constants  from './post/constants'
+import constants from "./post/constants";
 import NumberPost from "./post/numberPost";
 
 export default function PostBoard() {
@@ -12,7 +12,6 @@ export default function PostBoard() {
   const [postData, setPostData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postNumber, setPostNumber] = useState(4);
- 
 
   const { data: session } = useSession();
   const email = session?.user?.email;
@@ -22,8 +21,6 @@ export default function PostBoard() {
 
   useEffect(() => {
     async function fetchData() {
-
-      
       try {
         const [postResponse, usernameResponse] = await Promise.all([
           axios.get("/api/Post"),
@@ -32,7 +29,6 @@ export default function PostBoard() {
 
         setPostData(postResponse.data);
         setUser(usernameResponse.data.username);
-        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -42,51 +38,51 @@ export default function PostBoard() {
 
   if (session) {
     return (
-      <div className="w-[1100px] flex flex-col min-[500px]:w-screen">
-        <div>
-            <Profile user={user} />
-          
-          <div className="font-roboto rounded w-[1100px] min-[500px]:w-screen">
-            <h1 className="h-[60px] font-bold text-2xl text-center flex flex-col justify-center bg-black text-white rounded-tr-lg ">
-              C O D E L E A P
-            </h1>
-            <div className="border border-black bg-gradient-to-r from-gray-50 to-gray-100 rounded-br-xl">
-              <div className="p-4">
-                <HatTrick
-                  setContent={setContent}
-                  setTitle={setTitle}
-                  title={title}
-                  content={content}
-                />
-                <Send
-                  user={user}
-                  title={title}
-                  content={content}
-                  email={email}
-                  setContent={setContent}
-                  setTitle={setTitle}
-                  setPostData={setPostData}
-                  postData={postData}
-                ></Send>
-              </div>
-            </div>
+      <div className="flex flex-col w-screen items-center">
+  <div className="flex flex-col justify-center items-center mt-5">
+    <Profile user={user} />
+    <div className="flex flex-col items-center">
+      <div className="font-roboto rounded">
+        <h1 className="h-[60px] font-bold text-2xl text-center flex flex-col justify-center bg-black text-white  -mt-1 w-screen max-w-[1100px]">
+          C O D E L E A P
+        </h1>
+        <div className="border border-black bg-gradient-to-b from-blue-100 to-blue-200 ">
+          <div className="p-4">
+            <HatTrick
+              setContent={setContent}
+              setTitle={setTitle}
+              title={title}
+              content={content}
+            />
+            <Send
+              user={user}
+              title={title}
+              content={content}
+              email={email}
+              setContent={setContent}
+              setTitle={setTitle}
+              setPostData={setPostData}
+              postData={postData}
+            ></Send>
           </div>
         </div>
-       <div className="flex justify-center mt-3 min-[500px]:w-screen">
-        <div className="flex">
-        <Pagination
-          postData={postData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          postNumber={postNumber}
-        ></Pagination>
-        <NumberPost setPostNumber={setPostNumber}></NumberPost>
-        </div>
-      
-        
-        
-        </div>
-      
+      </div>
+    </div>
+ 
+
+  <div className="bg-gradient-to-b from-blue-200 to-blue-300 flex flex-col justify-center items-center border-l border-r border-black max-w-[1100px] w-screen p-2 ">
+    <div className="flex ">
+      <Pagination
+        postData={postData}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        postNumber={postNumber}
+      ></Pagination>
+      <NumberPost setPostNumber={setPostNumber}></NumberPost>
+    </div>
+  </div>
+</div>
+
         <div>
           {constants(postData, currentPage, postNumber).map((post) => (
             <DisplayPost
@@ -103,18 +99,22 @@ export default function PostBoard() {
             />
           ))}
         </div>
-         <div className="flex justify-center mt-3 mb-10"> <Pagination
-          postData={postData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          postNumber={postNumber}
-        ></Pagination></div>
        
-    
-       
+        <div className="flex  mb-10  max-w-[1100px] flex-col items-center border-l border-r border-black w-screen p-20 rounded-b-full bg-gradient-to-b from-red-600 via-yellow-600 ">
+  
+  <Pagination
+    postData={postData}
+    currentPage={currentPage}
+    setCurrentPage={setCurrentPage}
+    postNumber={postNumber}
+  ></Pagination>
+        
+        </div>
+      
       </div>
+      
     );
-          }    
+  }
 
   return <Disconnected></Disconnected>;
 }

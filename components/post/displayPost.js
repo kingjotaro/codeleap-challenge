@@ -17,9 +17,9 @@ export default function DisplayPost(props) {
   }
 
   return (
-    <div className="shadow-2xl mt-5 font-roboto rounded w-[1100px] min-[500px]:w-screen">
-      <div className="bg-white w-[1100px] h-[316px] border border-gray-500 rounded-lg min-[500px]:w-screen">
-        <div className="rounded-t-md bg-black p-2 flex justify-between text-white h-[80px]">
+    <div className=" font-roboto  items-center flex flex-col">
+      <div className="bg-white  h-[316px] border border-gray-500  w-screen max-w-[1100px]">
+        <div className=" bg-black p-2 flex justify-between text-white h-[80px]">
           <div className="ml-5 text-xl font-bold flex justify-center flex-col">
             {title}
           </div>

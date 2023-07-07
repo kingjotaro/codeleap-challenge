@@ -80,7 +80,7 @@
         return '1 hour ago';
       }
       if (compareHours(calculateHourDifference(time), '01:00')) {
-        return extractLastTwoDigits(time) + ' minutes ago';
+        return extractLastTwoDigits(time) + ' min ago';
       }
       return getTwoDigitHour(calculateHourDifference(time)) + ' hours ago';
     }
@@ -90,7 +90,7 @@
         return '1 hour ago';
       }
       if (compareHours(calculateHourDifference(time), '01:00')) {
-        return extractLastTwoDigits(time) + ' minutes ago';
+        return extractLastTwoDigits(time) + ' min ago';
       }
       return getTwoDigitHour(calculateHourDifference(time)) + ' hours ago';
     }
