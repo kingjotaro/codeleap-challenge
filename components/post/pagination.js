@@ -22,7 +22,7 @@ export default function Pagination(props) {
   
     const previousButton = (
       <button
-        className={`mx-3 px-3 py-1 rounded-full ${
+        className={`mx-3 px-3 py-1 rounded-full  ${
           currentPage === 1 ? "bg-gray-300" : "bg-blue-500 text-white"
           
         }`}
@@ -38,7 +38,7 @@ export default function Pagination(props) {
       const pageButton = (
         <button
           key={i}
-          className={`mx-3 px-3 py-1  rounded-full ${
+          className={`mx-3 px-3 py-1 rounded-full min-[500px]:px-2 ${
             i === currentPage ? "bg-green-700 text-white" : "bg-white"
           }`}
           onClick={() => handlePageChange(i)}
@@ -51,7 +51,7 @@ export default function Pagination(props) {
   
     const nextButton = (
       <button
-        className={`mx-3 px-3 py-1 rounded-full ${
+        className={`mx-3 px-3 py-1 rounded-full  ${
           currentPage === totalPages ? "bg-gray-300" : "bg-blue-500 text-white"
         }`}
         disabled= {currentPage === totalPages}

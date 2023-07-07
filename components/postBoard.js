@@ -42,7 +42,7 @@ export default function PostBoard() {
 
   if (session) {
     return (
-      <div className="w-[1100px] flex flex-col">
+      <div className="w-[1100px] flex flex-col min-[500px]:w-screen">
         <div>
             <Profile user={user} />
           
@@ -72,7 +72,7 @@ export default function PostBoard() {
             </div>
           </div>
         </div>
-       <div className="ml-24 flex justify-center mt-3 min-[500px]:w-screen">
+       <div className="flex justify-center mt-3 min-[500px]:w-screen">
         <div className="flex">
         <Pagination
           postData={postData}
