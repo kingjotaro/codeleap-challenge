@@ -10,12 +10,6 @@ export default function Login({ children }) {
     setBoardVisible(!boardVisible);
   };
 
-  useEffect(() => {
-    return () => {
-      clearTimeout();
-    };
-  }, []);
-
   if (!session) {
     return (
       <div className="flex flex-col items-center justify-center h-screen bg-white">
@@ -35,7 +29,7 @@ export default function Login({ children }) {
     
               
               onClick={() => signIn("google")}
-              className="bg-[#050708] awesomebutton top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute px-5 py-2.5"
+              className="mobile"
             >
               Google Account
             </button>

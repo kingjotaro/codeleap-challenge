@@ -3,6 +3,8 @@ export default function Pagination(props) {
   
     const totalPages = Math.ceil(postData.length / postNumber);
     const pageNumbersToShow = 2;
+
+    
     let startPage = currentPage - pageNumbersToShow;
     let endPage = currentPage + pageNumbersToShow;
   
@@ -20,7 +22,7 @@ export default function Pagination(props) {
   
     const previousButton = (
       <button
-        className={`mx-1 px-3 py-1 rounded-full ${
+        className={`mx-3 px-3 py-1 rounded-full ${
           currentPage === 1 ? "bg-gray-300" : "bg-blue-500 text-white"
           
         }`}
@@ -36,8 +38,8 @@ export default function Pagination(props) {
       const pageButton = (
         <button
           key={i}
-          className={`mx-1 px-3 py-1 rounded-full ${
-            i === currentPage ? "bg-blue-500 text-white" : "bg-gray-300"
+          className={`mx-3 px-3 py-1  rounded-full ${
+            i === currentPage ? "bg-green-700 text-white" : "bg-white"
           }`}
           onClick={() => handlePageChange(i)}
         >
@@ -49,7 +51,7 @@ export default function Pagination(props) {
   
     const nextButton = (
       <button
-        className={`mx-1 px-3 py-1 rounded-full ${
+        className={`mx-3 px-3 py-1 rounded-full ${
           currentPage === totalPages ? "bg-gray-300" : "bg-blue-500 text-white"
         }`}
         disabled= {currentPage === totalPages}

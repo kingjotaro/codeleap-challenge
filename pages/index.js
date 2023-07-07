@@ -5,9 +5,7 @@ export default function Home() {
 
   return (
     <Login>
-        <UsernameBoard>
-          
-          </UsernameBoard>  
+        <UsernameBoard> </UsernameBoard>  
     </Login>
   );
 }

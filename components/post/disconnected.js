@@ -11,7 +11,7 @@ export default function Disconnected() {
         if (!session) {
           window.location.replace("/");
         }
-      }, 7000);
+      }, 700000);
     
       return () => {
         clearTimeout(redirectTimeout);
@@ -23,8 +23,8 @@ export default function Disconnected() {
       }
 
     return ( 
-        <div className="flex flex-col justify-center items-center h-[800px]">
-        <div className="text-red-600 font-bold border w-[480px] rounded-full bg-gray-50 p-2">
+        <div className="flex flex-col justify-center items-center h-screen ">
+        <div className="text-red-600 font-bold border rounded-full bg-gray-50 p-2">
         Your account is disconnected. Please log in to start posting! You will be redirected to the homepage in a few seconds.
         </div>
         <button

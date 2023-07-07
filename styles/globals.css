@@ -24,8 +24,8 @@
 }
 
 
-.awesomebutton {
-  @apply w-full sm:w-auto transform text-white hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-2xl text-center;
+.mobile {
+  @apply w-60 transform text-white hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-2xl text-center bg-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute py-1;
 }
 
 

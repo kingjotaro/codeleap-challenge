@@ -10,8 +10,8 @@ export default function HatTrick(props) {
   };
 
   return (
-    <div>
-      <h2 className="font-bold text-2xl text-start">{titleState}</h2>
+    <div className="w-full">
+      <h2 className=" font-bold text-2xl text-start">Send a message!</h2>
       <div className="mb-1 mt-4 text-start ">Title</div>
       <input
         maxLength={53}
@@ -26,7 +26,7 @@ export default function HatTrick(props) {
         maxLength={418}
         value={content}
         onChange={handleContentChange}
-        className="inputcss h-[80px] mx-auto"
+        className="inputcss  mx-auto"
         type="text"
         placeholder=" Content Here"
       ></textarea>
