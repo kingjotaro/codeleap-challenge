@@ -46,7 +46,7 @@ export default function PostBoard() {
         <h1 className="h-[60px] font-bold text-2xl text-center flex flex-col justify-center bg-black text-white  -mt-1 w-screen max-w-[1100px]">
           C O D E L E A P
         </h1>
-        <div className="border border-black bg-gradient-to-b from-blue-100 to-blue-200 ">
+        <div className="border border-black  ">
           <div className="p-4">
             <HatTrick
               setContent={setContent}
@@ -70,7 +70,7 @@ export default function PostBoard() {
     </div>
  
 
-  <div className="bg-gradient-to-b from-blue-200 to-blue-300 flex flex-col justify-center items-center border-l border-r border-black max-w-[1100px] w-screen p-2 ">
+  <div className="bg-gradient-to-b from-gray-300  flex flex-col justify-center items-center border-l border-r border-black max-w-[1100px] w-screen p-2 ">
     <div className="flex ">
       <Pagination
         postData={postData}
@@ -100,7 +100,7 @@ export default function PostBoard() {
           ))}
         </div>
        
-        <div className="flex  mb-10  max-w-[1100px] flex-col items-center border-l border-r border-black w-screen p-20 rounded-b-full bg-gradient-to-b from-red-600 via-yellow-600 ">
+        <div className="flex  mb-10  max-w-[1100px] flex-col items-center  w-screen p-5 bg-black ">
   
   <Pagination
     postData={postData}

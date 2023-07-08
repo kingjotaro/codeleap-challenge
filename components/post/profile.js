@@ -7,8 +7,8 @@ export default function Profile(props) {
 
   return (
     <div className="w-[100%] max-w-[1100px] ">
-        <div className="items-center flex flex-col bg-gradient-to-b from-blue-200 to-blue-100 rounded-t-full ">
-        <div className="mt-10 font-extrabold text-gray-800 text-center sm:text-left md:text-center text-sm md:text-lg lg:text-xl xl:text-2xl">
+        <div className="items-center flex flex-col bg-black rounded-t-full ">
+        <div className="mt-10 font-extrabold text-white text-center sm:text-left md:text-center text-sm md:text-lg lg:text-xl xl:text-2xl">
     Welcome to CodeLeap Network {session?.user?.name}.
 </div>
 
@@ -19,7 +19,7 @@ export default function Profile(props) {
             alt=""
             className="w-24 h-24 rounded-full mt-5 mx-auto"
           />
-          <div className="mt-5 text-center">
+          <div className="mt-5 text-center text-white">
             You're connected as <span className="font-bold">{user}</span>
           </div>
           <button
