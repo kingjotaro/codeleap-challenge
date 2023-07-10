@@ -69,11 +69,11 @@ export default function DisplayPost(props) {
             </button>
           </div>
         </div>
-        <div className="flex justify-between text-gray-500 mt-5 p-1 px-24">
-          <div className="border font-bold bg-gray-100 rounded-2xl w-[200px] text-center">
+        <div className="flex justify-between text-gray-500 mt-5 p-1 ">
+          <div className="font-bold text-center flex items-center flex-col ml-5">
             @{username}
           </div>
-          <div className="border bg-gray-100 rounded-2xl w-[100px] text-center ">
+          <div className="text-center mr-5 ">
             {subtractTime(date, time)}
           </div>
         </div>
