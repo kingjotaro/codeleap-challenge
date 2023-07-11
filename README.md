@@ -153,8 +153,9 @@ Contact:
  <a align="left" href="https://rafael-leet.vercel.app" target="_blank">
  - Visit my Web Portfolio 
   </a>
-
+<br/>
 
  <a align="left" href="https://www.linkedin.com/in/rafael1337/" target="_blank">
  -  Linkedin 
   </a>
+  <br/>
