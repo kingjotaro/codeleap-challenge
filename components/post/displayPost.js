@@ -73,9 +73,7 @@ export default function DisplayPost(props) {
           <div className="font-bold text-center flex items-center flex-col ml-5">
             @{username}
           </div>
-          <div className="text-center mr-5 ">
-            {subtractTime(date, time)}
-          </div>
+          <div className="text-center mr-5 ">{subtractTime(date, time)}</div>
         </div>
         <div className="flex flex-row justify-center">
           <div className="h-[160px] w-[900px] p-3  break-word rounded text-gray-900 bg-gray-100 ">

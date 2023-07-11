@@ -19,6 +19,8 @@ export default function ModalEdit(props) {
     setTitleState('Edit your message!');
   }, []);
 
+
+  /* put resquest axios, editar mensagem */
   async function edit() {
     const data = { title, content, _id, date, time, username };
     await axios.put("/api/Post?id=" + _id, data);

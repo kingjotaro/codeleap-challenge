@@ -6,14 +6,8 @@ export default function Send(props) {
   
   const {user, title, content, email, setContent, setTitle, setPostData, postData}= props;
 
-  
-
-
-
-
+  /* axios post requst, posta uma publicação com data, hora, titulo, nome, email e conteudo */
     async function PostAlldata() {
-        
-
         const currentTime = new Date();
         const formattedTime = format(currentTime, "yyyy/MM/dd HH:mm");
         const [date, time] = formattedTime.split(" ");
@@ -30,7 +24,7 @@ export default function Send(props) {
         }
       }
 
-  
+      /* checa espaços vazios no começo titulo e conteudo */
       const isBlank = (title && title.trim()) === "" || (content && content.trim()) === "";
 
 

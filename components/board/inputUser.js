@@ -1,9 +1,8 @@
 export default function InputUser(props) {
-  
-  const { username, setUsername, usernameWarm, setUsernameWarn} = props;
+  const { username, setUsername, usernameWarm, setUsernameWarn } = props;
 
   const redAlert = filter(username) > 0 && filter(username) <= 2;
-  
+
   function filter(username) {
     return username.replace(/ /g, "").length;
   }
@@ -11,9 +10,6 @@ export default function InputUser(props) {
   const handleInputChange = (event) => {
     setUsername(event.target.value);
   };
-
-
-  
 
   return (
     <label>
@@ -24,7 +20,7 @@ export default function InputUser(props) {
         onChange={handleInputChange}
         className="inputcss"
         type="text"
-        placeholder=' John Doe'
+        placeholder=" John Doe"
       />
 
       {redAlert && (
@@ -32,8 +28,6 @@ export default function InputUser(props) {
           Username should have at least 3 character
         </p>
       )}
-      
-      
     </label>
   );
 }

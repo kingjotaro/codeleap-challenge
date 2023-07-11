@@ -9,6 +9,7 @@ export default function ModalDelete(props) {
     setIsOpen(!isOpen);
   }
 
+  /* delete request axios, deletar postagem */
   function del() {
     axios.delete("/api/Post?id=" + _id);
     setIsOpen(false);

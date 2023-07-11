@@ -11,7 +11,7 @@ export default function Disconnected() {
         if (!session) {
           window.location.replace("/");
         }
-      }, 700000);
+      }, 4000);
     
       return () => {
         clearTimeout(redirectTimeout);
