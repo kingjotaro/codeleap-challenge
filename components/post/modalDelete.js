@@ -20,7 +20,7 @@ export default function ModalDelete(props) {
     <div>
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-black p-8 rounded border border-gray-600 w-[90%] sm:w-[75%] md:w-[50%] lg:w-[30%]">
+          <div className="bg-black p-8 rounded border border-gray-600 ">
             <div className="text-xl font-bold text-center mb-4 text-red-600">Warning</div>
             <div className="text-white">Are you sure you want to delete?</div>
             <div className="flex mt-4 justify-between">
