@@ -149,7 +149,12 @@ Rafael Lourenço 🚀
 
 Contact:
 
-- [Visit my Web Portfolio](https://rafael-leet.vercel.app)
 
-- [Linkedin](https://www.linkedin.com/in/rafael1337/)
+ <a align="left" href="https://rafael-leet.vercel.app" target="_blank">
+ - Visit my Web Portfolio 
+  </a>
 
+
+ <a align="left" href="https://www.linkedin.com/in/rafael1337/" target="_blank">
+ -  Linkedin 
+  </a>
