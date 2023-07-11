@@ -120,13 +120,13 @@ Screen Shots
 
 <br/>
 
-- Modal Delete
+- Delete
 
 ![delete](/public/codeleap5.png)
 
 <br/>
 
-- Modal Edit
+- Edit
 
 ![edit](/public/codeleap6.png)
 
@@ -134,7 +134,7 @@ Screen Shots
 
 
 
-- Modal Confirm Account
+- Signout
 
 ![signout](/public/codeleap7.png)
 
